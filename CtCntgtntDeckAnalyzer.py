@@ -27,7 +27,7 @@ DeckUnderTest = "open tatooine objective etc.txt"
 
 #searches master card list for card name and underlying card
 
-def CountNumberOfCardsInDeck(cardname,deckname):
+def CountNumberOfCardsInstancesInDeck(cardname,deckname):
     CardCount = 0
     balls = open(deckname)
     mytree = ET.parse(balls)    
@@ -40,7 +40,7 @@ def CountNumberOfCardsInDeck(cardname,deckname):
     return CardCount
  
 
-BeezerCount = CountNumberOfCardsInDeck("Corporal Beezers", DeckUnderTest)
+BeezerCount = CountNumberOfCardsInstancesInDeck("Corporal Beezers", DeckUnderTest)
 
 print("You have this many Beezers:",BeezerCount)
 
